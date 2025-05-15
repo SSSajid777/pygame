@@ -11,6 +11,7 @@ background_color= 34, 92, 186  #Set the background color in RGB
 #Load in our image
 
 sad=pygame.image.load("sadface.webp")
+pikachu= pygame.transform.scale(sad, (50, 40))
 
 #Main running loop
 running=True
