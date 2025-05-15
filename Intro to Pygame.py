@@ -6,7 +6,11 @@ pygame.init() #Initialize a pygame class
 width, height= 400, 400
 screen = pygame.display.set_mode((width, height))
 
-background_color= 34, 92, 186
+background_color= 34, 92, 186  #Set the background color in RGB
+
+#Load in our image
+
+sad=pygame.image.load("sadface.webp")
 
 #Main running loop
 running=True
