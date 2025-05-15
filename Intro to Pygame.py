@@ -6,7 +6,7 @@ pygame.init() #Initialize a pygame class
 width, height= 400, 400
 screen = pygame.display.set_mode((width, height))
 
-background_color= 34, 92, 186  #Set the background color in RGB
+background_color= 0, 119, 214  #Set the background color in RGB
 
 #Load in our image
 sad=pygame.image.load("sadface.jfif")
@@ -22,7 +22,8 @@ while running:
             running=False
     screen.fill(background_color)
     
-    screen.blit(sad, sad_rect)   
+    screen.blit(sad, sad_rect)  
+
     pygame.display.flip() #Refreshes the screen
 
 pygame.quit() #Quits pygame properly
