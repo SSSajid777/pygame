@@ -6,6 +6,8 @@ pygame.init() #Initialize a pygame class
 width, height= 400, 400
 screen = pygame.display.set_mode((width, height))
 
+background_color= 69, 139, 237
+
 #Main running loop
 running=True
 while running:
@@ -13,8 +15,7 @@ while running:
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
             running=False
-        
-
+    screen.fill(background_color)   
     pygame.display.flip() #Refreshes the screen
 
 pygame.quit() #Quits pygame properly
