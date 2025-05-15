@@ -12,3 +12,4 @@ while running:
     pygame.display.flip() #Refreshes the screen
 
 pygame.quit() #Quits pygame properly
+
