@@ -10,7 +10,7 @@ background_color= 0, 119, 214  #Set the background color in RGB
 
 #Load in our image
 sad=pygame.image.load("sadface.jfif")
-sad= pygame.transform.scale(sad, (50, 40))
+sad= pygame.transform.scale(sad, (70, 50))
 sad_rect= sad.get_rect()
 
 #Main running loop
