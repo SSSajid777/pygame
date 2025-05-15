@@ -6,7 +6,7 @@ pygame.init() #Initialize a pygame class
 width, height= 400, 400
 screen = pygame.display.set_mode((width, height))
 
-background_color= 69, 139, 237
+background_color= 34, 92, 186
 
 #Main running loop
 running=True
