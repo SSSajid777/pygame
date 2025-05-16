@@ -30,9 +30,18 @@ while running:
     screen.blit(sad, sad_rect)   #Adds pikachu image to the rectangle
     sad_rect=sad_rect.move(sad_speed)
 
+    #Bound pikachu in our screen
+    if sad_rect.left < 0 or sad_rect.right > width:
+        sad_speed[0]= -sad_speed[0]
+    if sad_rect.top < 0 or sad_rect.bottom > height:
+        sad_speed[1]= -sad_speed[1]
+    if sad_rect.left==0 or sad_rect.right== width or sad_rect.top==0 or sad_rect.bottom== height:
+        background_color= 0, 119, 0
+
+
     pygame.display.flip() #Refreshes the screen
 
-    time.sleep(10/1000)
+    time.sleep(10/1000)  #Slowed down pikachu
 
 pygame.quit() #Quits pygame properly
 
