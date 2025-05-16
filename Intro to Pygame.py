@@ -14,9 +14,13 @@ sad=pygame.image.load("sadface.jfif")
 sad= pygame.transform.scale(sad, (70, 50))
 sad_rect= sad.get_rect()
 
+happy=pygame.image.load("smileface.png")
+happy= pygame.transform.scale(happy, (70, 50))
+happy_rect= happy.get_rect()
+
 #Sets pikachu's speed
 sad_speed=[1,1]
-
+happy_speed=[2,2]
 
 #Main running loop
 running=True
@@ -28,15 +32,22 @@ while running:
     screen.fill(background_color)
     
     screen.blit(sad, sad_rect)   #Adds pikachu image to the rectangle
+    screen.blit(happy, happy_rect)
     sad_rect=sad_rect.move(sad_speed)
+    happy_rect=happy_rect.move(happy_speed)
 
     #Bound pikachu in our screen
     if sad_rect.left < 0 or sad_rect.right > width:
         sad_speed[0]= -sad_speed[0]
     if sad_rect.top < 0 or sad_rect.bottom > height:
         sad_speed[1]= -sad_speed[1]
-    if sad_rect.left==0 or sad_rect.right== width or sad_rect.top==0 or sad_rect.bottom== height:
-        background_color= 0, 119, 0
+    if happy_rect.left < 0 or happy_rect.right > width:
+        happy_speed[0]= -happy_speed[0]
+    if happy_rect.top < 0 or happy_rect.bottom > height:
+        happy_speed[1]= -happy_speed[1]        
+        
+    
+    
 
 
     pygame.display.flip() #Refreshes the screen
