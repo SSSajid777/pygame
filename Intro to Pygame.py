@@ -20,7 +20,7 @@ happy_rect= happy.get_rect()
 
 #Sets pikachu's speed
 sad_speed=[1,1]
-happy_speed=[2,2]
+happy_speed=[1,-3]
 
 #Main running loop
 running=True
