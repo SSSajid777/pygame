@@ -1,4 +1,5 @@
 import pygame
+import time
 
 pygame.init() #Initialize a pygame class
 
@@ -13,6 +14,10 @@ sad=pygame.image.load("sadface.jfif")
 sad= pygame.transform.scale(sad, (70, 50))
 sad_rect= sad.get_rect()
 
+#Sets pikachu's speed
+sad_speed=[1,1]
+
+
 #Main running loop
 running=True
 while running:
@@ -22,9 +27,12 @@ while running:
             running=False
     screen.fill(background_color)
     
-    screen.blit(sad, sad_rect)  
+    screen.blit(sad, sad_rect)   #Adds pikachu image to the rectangle
+    sad_rect=sad_rect.move(sad_speed)
 
     pygame.display.flip() #Refreshes the screen
+
+    time.sleep(10/1000)
 
 pygame.quit() #Quits pygame properly
 
