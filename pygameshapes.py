@@ -12,6 +12,9 @@ circle_colour= 255,0,100
 #Define line colour
 line_colour= 255,255,100
 
+#Define pentagon colour
+pentagon_colour= 100,255,210
+
 #Main running loop
 running=True
 while running:
@@ -25,6 +28,8 @@ while running:
     pygame.draw.circle(screen, circle_colour, (200,200),(20))
     #Draw a line
     pygame.draw.line(screen, line_colour, (300,10), (300,300), 10)
+    #Draw a pentagon
+    pygame.draw.polygon (screen, pentagon_colour, [(100, 100),(150, 60),(200,100),(176,150),(125,150)])
 
     pygame.display.flip() #Refreshes the screen
 
