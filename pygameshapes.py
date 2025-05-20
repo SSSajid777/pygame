@@ -17,7 +17,7 @@ while running:
         if event.type==pygame.QUIT:
             running=False
     pygame.draw.rect(screen, rect_colour, pygame.Rect(30, 30, 60, 60))
-    pygame.draw.circle(screen, circle_colour, (200),(10))
+    pygame.draw.circle(screen, circle_colour, (200,200),(10))
 
     pygame.display.flip() #Refreshes the screen
 
