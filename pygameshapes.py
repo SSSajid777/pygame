@@ -13,6 +13,7 @@ while running:
         if event.type==pygame.QUIT:
             running=False
     pygame.draw.rect(screen, rect_colour, pygame.Rect(30, 30, 60, 60))
+    pygame.draw.circle(screen, (200,0,0), (60,60),(10))
 
     pygame.display.flip()
 
