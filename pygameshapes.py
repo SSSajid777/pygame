@@ -23,7 +23,7 @@ while running:
         if event.type==pygame.QUIT:
             running=False
     #Draw a rectangle
-    pygame.draw.rect(screen, rect_colour, pygame.Rect(30, 30, 60, 60))
+    pygame.draw.rect(screen, rect_colour, pygame.Rect(30, 30, 60, 60))   #arguments (Exam question)
     #Draw a circle
     pygame.draw.circle(screen, circle_colour, (200,200),(20))
     #Draw a line
