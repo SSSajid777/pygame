@@ -33,6 +33,16 @@ while running:
             running=False
         if event.type==pygame.MOUSEBUTTONDOWN:
             pos=pygame.mouse.get_pos()
+        if event.type==pygame.KEYDOWN:
+            if event.key==pygame.K_LEFT:
+                pos=(crosshairs_rect.center[0]-5, crosshairs_rect.center[1])
+            if event.key==pygame.K_RIGHT:
+                pos=(crosshairs_rect.center[0]+5, crosshairs_rect.center[1])
+            if event.key==pygame.K_UP:
+                pos=(crosshairs_rect.center[0], crosshairs_rect.center[1]-5)
+            if event.key==pygame.K_DOWN:
+                pos=(crosshairs_rect.center[0], crosshairs_rect.center[1]+5)
+
 
      
     screen.fill(background_color)
