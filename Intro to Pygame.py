@@ -11,12 +11,12 @@ background_color= 0, 119, 214  #Set the background color in RGB
 
 #Load in our image
 sad=pygame.image.load("sadface.jfif")
-sad= pygame.transform.scale(sad, (70, 50))
+sad= pygame.transform.scale(sad, (80, 60))
 sad_rect= sad.get_rect()
 
 #Load in our crosshair image
 crosshairs=pygame.image.load("crosshair.webp")
-crosshairs= pygame.transform.scale(crosshairs, (70, 50))
+crosshairs= pygame.transform.scale(crosshairs, (30, 30))
 crosshairs_rect= crosshairs.get_rect()
 pos=[0,0]
 
@@ -33,7 +33,8 @@ while running:
             running=False
     screen.fill(background_color)
     
-    screen.blit(sad, sad_rect)   #Adds pikachu image to the rectangle
+    screen.blit(sad, sad_rect)  #Adds pikachu image to the rectangle
+    screen.blit(crosshairs, pos, crosshairs_rect)   
     """
     sad_rect=sad_rect.move(sad_speed)
     
