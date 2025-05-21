@@ -18,7 +18,7 @@ sad_rect= sad.get_rect()
 crosshairs=pygame.image.load("crosshair.webp")
 crosshairs= pygame.transform.scale(crosshairs, (30, 30))
 crosshairs_rect= crosshairs.get_rect()
-pos=[0,0]
+pos=[200,200]
 
 #Sets pikachu's speed
 sad_speed=[1,1]
@@ -31,10 +31,18 @@ while running:
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
             running=False
+        if event.type==pygame.MOUSEBUTTONDOWN:
+            pos=pygame.mouse.get_pos()
+
+     
     screen.fill(background_color)
     
     screen.blit(sad, sad_rect)  #Adds pikachu image to the rectangle
-    screen.blit(crosshairs, pos, crosshairs_rect)   
+     #Set the center of the crosshair as pos
+    crosshairs_rect.center=pos   
+    screen.blit(crosshairs,crosshairs_rect) 
+
+     
     """
     sad_rect=sad_rect.move(sad_speed)
     
