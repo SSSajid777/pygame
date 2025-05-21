@@ -15,9 +15,10 @@ sad= pygame.transform.scale(sad, (70, 50))
 sad_rect= sad.get_rect()
 
 #Load in our crosshair image
-crosshair=pygame.image.load("crosshair.webp")
-crosshair= pygame.transform.scale(crosshair, (70, 50))
-crosshair_rect= crosshair.get_rect()
+crosshairs=pygame.image.load("crosshair.webp")
+crosshairs= pygame.transform.scale(crosshairs, (70, 50))
+crosshairs_rect= crosshairs.get_rect()
+pos=[0,0]
 
 #Sets pikachu's speed
 sad_speed=[1,1]
