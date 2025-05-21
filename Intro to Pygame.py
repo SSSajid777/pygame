@@ -14,6 +14,10 @@ sad=pygame.image.load("sadface.jfif")
 sad= pygame.transform.scale(sad, (70, 50))
 sad_rect= sad.get_rect()
 
+#Load in our crosshair image
+crosshair=pygame.image.load("crosshair.webp")
+crosshair= pygame.transform.scale(crosshair, (70, 50))
+crosshair_rect= crosshair.get_rect()
 
 #Sets pikachu's speed
 sad_speed=[1,1]
@@ -29,7 +33,7 @@ while running:
     screen.fill(background_color)
     
     screen.blit(sad, sad_rect)   #Adds pikachu image to the rectangle
-    
+    """
     sad_rect=sad_rect.move(sad_speed)
     
     #Bound pikachu in our screen
@@ -37,10 +41,7 @@ while running:
         sad_speed[0]= -sad_speed[0]
     if sad_rect.top < 0 or sad_rect.bottom > height:
         sad_speed[1]= -sad_speed[1]
-    
-    
-    
-
+    """
 
     pygame.display.flip() #Refreshes the screen
 
