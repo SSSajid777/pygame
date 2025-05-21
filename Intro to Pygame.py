@@ -46,7 +46,7 @@ while running:
 
      
     screen.fill(background_color)
-    
+    sad_rect.center=pos
     screen.blit(sad, sad_rect)  #Adds pikachu image to the rectangle
      #Set the center of the crosshair as pos
     crosshairs_rect.center=pos   
