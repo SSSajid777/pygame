@@ -19,9 +19,13 @@ playerCar1=Car(RED,20,30)
 playerCar1.rect.x=200
 playerCar1.rect.y=300
 
-playerCar1=Car(GREEN,20,30)
-playerCar1.rect.x=200
-playerCar1.rect.y=400
+playerCar2=Car(PURPLE,20,30)
+playerCar2.rect.x=100
+playerCar2.rect.y=100
+
+#Add our sprites to the list
+all_spirte_list.add(playerCar1)
+all_spirte_list.add(playerCar2)
 
 running=True
 while running:
@@ -30,6 +34,9 @@ while running:
         if event.type==pygame.QUIT:
             running=False
 
+    #Draw all our sprites
+    all_spirte_list.draw(screen)
+    
     pygame.display.flip()
 
 pygame.quit() #Quits pygame properly
