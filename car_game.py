@@ -1,7 +1,7 @@
 import pygame 
 pygame.init() #Initialize a pygame class
 
-from car import Car        #How do we impoprt class (exam question)
+from car import Car        #How do we import class (exam question)
 
 #Set our screen size
 width, height= 400, 400
@@ -18,6 +18,10 @@ all_spirte_list=pygame.sprite.Group()
 playerCar1=Car(RED,20,30)
 playerCar1.rect.x=200
 playerCar1.rect.y=300
+
+playerCar1=Car(GREEN,20,30)
+playerCar1.rect.x=200
+playerCar1.rect.y=400
 
 running=True
 while running:
