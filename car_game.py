@@ -13,6 +13,10 @@ WHITE=(255,255,255)
 RED=(255,0,0)
 PURPLE=(255,0,255)
 
+#Create a list that will contain all our sprites
+all_spirte_list=pygame.sprite.Group()
+playerCar1=Car(RED,20,30)
+
 running=True
 while running:
     #Create an event in pygame
@@ -23,3 +27,4 @@ while running:
     pygame.display.flip()
 
 pygame.quit() #Quits pygame properly
+
