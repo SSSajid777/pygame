@@ -5,7 +5,7 @@ class Car(pygame.sprite.Sprite):   #init is called constructor (exam question)
 
     def __init__(self, colour, width, height):
         #Call Sprite constructor
-        super().__init__
+        super().__init__()  
 
         #Set the background colour and set it to be transparent
         self.image=pygame.Surface([width, height])  #Create out pygame surface
