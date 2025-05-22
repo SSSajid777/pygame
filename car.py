@@ -10,7 +10,7 @@ class Car(pygame.sprite.Sprite):   #init is called constructor (exam question)
         #Set the background colour and set it to be transparent
         self.image=pygame.Surface([width, height])  #Create out pygame surface
         self.image.fill(WHITE) #Fill the surface with a colour
-        self.image.set_colourkey(WHITE) 
+        self.image.set_colorkey(WHITE) 
 
         #Draw a rectangle
         pygame.draw.rect(self.image, colour, [0,0, width, height])
