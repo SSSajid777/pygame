@@ -1,6 +1,8 @@
 import pygame 
 pygame.init() #Initialize a pygame class
 
+from car import Car        #How do we impoprt class (exam question)
+
 #Set our screen size
 width, height= 400, 400
 screen = pygame.display.set_mode((width, height))
