@@ -16,6 +16,8 @@ PURPLE=(255,0,255)
 #Create a list that will contain all our sprites
 all_spirte_list=pygame.sprite.Group()
 playerCar1=Car(RED,20,30)
+playerCar1.rect.x=200
+playerCar1.rect.y=300
 
 running=True
 while running:
