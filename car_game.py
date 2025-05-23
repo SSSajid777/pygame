@@ -34,6 +34,12 @@ while running:
         if event.type==pygame.QUIT:
             running=False
 
+    #Find all keys that are pressed
+    keys=pygame.key.get_pressed()
+
+    if keys[pygame.K_LEFT]:
+        playerCar1.moveLeft(1)
+
     #Draw all our sprites
     all_spirte_list.draw(screen)
     
