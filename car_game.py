@@ -37,6 +37,12 @@ while running:
     #Are there any collisions?
     collide=playerCar1.rect.colliderect(playerCar2)
 
+    if collide:
+        playerCar1.rect.x=200
+        playerCar1.rect.y=300
+        playerCar2.rect.x=100
+        playerCar2.rect.y=100
+
     #Find all keys that are pressed
     keys=pygame.key.get_pressed()
 
