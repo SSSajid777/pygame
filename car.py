@@ -29,7 +29,7 @@ class Car(pygame.sprite.Sprite):   #init is called constructor (exam question)
     def moveLeft(self, pixels, min_x): # Move left
         new_x=self.rect.x - pixels
         if new_x<=min_x:
-            self.rect.x=min_x+10
+            self.rect.x=min_x
         else:
          self.rect.x -= pixels
     def moveUp(self, pixels):  # Move Up
