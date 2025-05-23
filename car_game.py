@@ -49,10 +49,24 @@ while running:
     if keys[pygame.K_DOWN]:
         playerCar1.moveDown(1)
 
+    if keys[pygame.K_LEFT]:
+        playerCar2.moveLeft(1)
+    if keys[pygame.K_RIGHT]:
+        playerCar2.moveRight(1)
+    if keys[pygame.K_UP]:
+        playerCar2.moveUp(1)
+    if keys[pygame.K_DOWN]:
+        playerCar2.moveDown(1)
+
+
     #Draw all our sprites
     all_spirte_list.draw(screen)
     
     pygame.display.flip()
+
+    #Createa a clock
+    clock=pygame.time.Clock()
+    clock.tick(60) 
 
 pygame.quit() #Quits pygame properly
 
