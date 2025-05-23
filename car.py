@@ -18,4 +18,14 @@ class Car(pygame.sprite.Sprite):   #init is called constructor (exam question)
         #self.image=pygame.image.load("car.png").convert_alpha()
         self.rect=self.image.get_rect()  #Get the rectangle of the image
  
-     
+    #Move the car functions
+    def moveRight(self, pixels): # Move Right
+        self.rect.x += pixels
+    def moveLeft(self, pixels):  # Move Left
+        self.rect.x -= pixels
+    def moveUp(self, pixels):  # Move Up
+     self.rect.y -= pixels   
+    def moveDown(self, pixels): # Move Down 
+        self.rect.y += pixels
+
+ 
