@@ -45,7 +45,7 @@ while running:
     else:
         keys=pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
-         playerCar1.moveLeft(1)
+         playerCar1.moveLeft(1,width)
         if keys[pygame.K_RIGHT]:
          playerCar1.moveRight(1, width)
         if keys[pygame.K_UP]:
@@ -54,7 +54,7 @@ while running:
          playerCar1.moveDown(1)
 
         if keys[pygame.K_a]:
-         playerCar2.moveLeft(1)
+         playerCar2.moveLeft(1, width)
         if keys[pygame.K_d]:
          playerCar2.moveRight(1, width)
         if keys[pygame.K_w]:
