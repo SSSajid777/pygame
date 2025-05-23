@@ -49,13 +49,13 @@ while running:
     if keys[pygame.K_DOWN]:
         playerCar1.moveDown(1)
 
-    if keys[pygame.K_LEFT]:
+    if keys[pygame.K_a]:
         playerCar2.moveLeft(1)
-    if keys[pygame.K_RIGHT]:
+    if keys[pygame.K_d]:
         playerCar2.moveRight(1)
-    if keys[pygame.K_UP]:
+    if keys[pygame.K_w]:
         playerCar2.moveUp(1)
-    if keys[pygame.K_DOWN]:
+    if keys[pygame.K_s]:
         playerCar2.moveDown(1)
 
 
@@ -66,7 +66,7 @@ while running:
 
     #Createa a clock
     clock=pygame.time.Clock()
-    clock.tick(60) 
+    clock.tick(1000) 
 
 pygame.quit() #Quits pygame properly
 
