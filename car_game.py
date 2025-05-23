@@ -34,7 +34,8 @@ while running:
         if event.type==pygame.QUIT:
             running=False
 
-
+    #Are there any collisions?
+    collide=playerCar1.rect.colliderect(playerCar2)
 
     #Find all keys that are pressed
     keys=pygame.key.get_pressed()
@@ -42,7 +43,7 @@ while running:
     if keys[pygame.K_LEFT]:
         playerCar1.moveLeft(1)
     if keys[pygame.K_RIGHT]:
-        playerCar1.moveRight(1)
+        playerCar1.moveRight(1, width)
     if keys[pygame.K_UP]:
         playerCar1.moveUp(1)
     if keys[pygame.K_DOWN]:
