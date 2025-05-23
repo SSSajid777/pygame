@@ -34,8 +34,7 @@ while running:
         if event.type==pygame.QUIT:
             running=False
 
-    #Draw some grass
-    screen.fill(GREEN)
+
 
     #Find all keys that are pressed
     keys=pygame.key.get_pressed()
@@ -57,6 +56,11 @@ while running:
         playerCar2.moveUp(1)
     if keys[pygame.K_s]:
         playerCar2.moveDown(1)
+
+    #Draw some background stuff
+    screen.fill(GREEN)     #Draw some grass
+    pygame.draw.rect(screen, GREY, [40,0, 200, 500])     #Draw a road
+    pygame.draw.line(screen, WHITE, [140,0], [140,500], 5) #Draw a white line
 
 
     #Draw all our sprites
