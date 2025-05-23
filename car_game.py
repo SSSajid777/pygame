@@ -66,7 +66,7 @@ while running:
 
     #Createa a clock
     clock=pygame.time.Clock()
-    clock.tick(1000) 
+    clock.tick(60) 
 
 pygame.quit() #Quits pygame properly
 
