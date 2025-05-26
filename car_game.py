@@ -78,7 +78,7 @@ while running:
     
     pygame.display.flip()
 
-    #Createa a clock
+    #Create a a clock
     clock=pygame.time.Clock()
     clock.tick(60) 
 

@@ -29,4 +29,14 @@ while running:
     
     pygame.display.flip() #Refreshes the screen
 
+
+    #Moving the snake
+    if direction=='RIGHT':
+        snake_position[0] += snake_speed
+
+    #Create a a clock
+    clock=pygame.time.Clock()
+    clock.tick(60) 
+
+
 pygame.quit()
