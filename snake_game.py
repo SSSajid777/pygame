@@ -16,6 +16,8 @@ screen = pygame.display.set_mode((width, height))
 snake_position=[360, 240] 
 snake_speed=10
 direction='RIGHT'
+snake_body=[[360,240]],[[350, 240]], [[340, 240]], [[330, 240]]
+
 #Main running loop
 running=True
 while running:
@@ -37,9 +39,10 @@ while running:
     screen.fill(black) #Fill in the screen
 
     #Set the snake on the screen
-    pygame.draw.rect(screen, green, pygame.Rect(snake_position[0], snake_position[1], 10, 10))
+    for pos in snake_body:
+      pygame.draw.rect(screen, green, pygame.Rect(pos[0], pos[1], 10, 10))
     
-    pygame.display.flip() #Refreshes the screen
+    
 
 
     #Moving the snake
@@ -51,6 +54,11 @@ while running:
         snake_position[1] -= 10
     if direction=='DOWN':
         snake_position[1] += 10
+
+    snake_body.insert(0, list(snake_position))
+
+    
+    pygame.display.flip() #Refreshes the screen
     #Create a a clock
     clock=pygame.time.Clock()
     clock.tick(snake_speed) 
