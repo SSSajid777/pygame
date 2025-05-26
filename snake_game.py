@@ -16,7 +16,7 @@ screen = pygame.display.set_mode((width, height))
 snake_position=[360, 240] 
 snake_speed=10
 direction='RIGHT'
-snake_body=[[360,240]],[[350, 240]], [[340, 240]], [[330, 240]]
+snake_body=[[360,240],[350, 240], [340, 240], [330, 240]]
 
 #Main running loop
 running=True
