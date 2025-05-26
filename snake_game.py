@@ -40,7 +40,7 @@ while running:
 
     #Set the snake on the screen
     for pos in snake_body:
-      pygame.draw.rect(screen, green, pygame.Rect(pos[0], pos[1], 10, 10))
+        pygame.draw.rect(screen, green, pygame.Rect(pos[0], pos[1], 10, 10))
     
     
 
