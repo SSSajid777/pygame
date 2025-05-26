@@ -24,13 +24,13 @@ while running:
         if event.type==pygame.QUIT:
             running=False
         if event.type==pygame.KEYDOWN:
-            if event.key==pygame.K_UP:
+            if event.key==pygame.K_UP and direction != 'DOWN':
                 direction='UP'
-            if event.key==pygame.K_DOWN:
+            if event.key==pygame.K_DOWN and direction != 'UP':
                 direction='DOWN'
-            if event.key==pygame.K_LEFT:
+            if event.key==pygame.K_LEFT and direction != 'RIGHT':
                 direction='LEFT'
-            if event.key==pygame.K_RIGHT:
+            if event.key==pygame.K_RIGHT and direction != 'LEFT':
                 direction='RIGHT'
 
 
@@ -44,11 +44,16 @@ while running:
 
     #Moving the snake
     if direction=='RIGHT':
-        snake_position[0] += snake_speed
-
+        snake_position[0] += 10
+    if direction=='LEFT':
+        snake_position[0] -= 10
+    if direction=='UP':
+        snake_position[1] -= 10
+    if direction=='DOWN':
+        snake_position[1] += 10
     #Create a a clock
     clock=pygame.time.Clock()
-    clock.tick(60) 
+    clock.tick(snake_speed) 
 
 
 pygame.quit()
