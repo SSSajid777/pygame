@@ -14,7 +14,7 @@ screen = pygame.display.set_mode((width, height))
 
 #Snake Information 
 snake_position=[360, 240] 
-snake_speed=15
+snake_speed=10
 direction='RIGHT'
 #Main running loop
 running=True
@@ -23,6 +23,18 @@ while running:
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
             running=False
+        if event.type==pygame.KEYDOWN:
+            if event.key==pygame.K_UP:
+                direction='UP'
+            if event.key==pygame.K_DOWN:
+                direction='DOWN'
+            if event.key==pygame.K_LEFT:
+                direction='LEFT'
+            if event.key==pygame.K_RIGHT:
+                direction='RIGHT'
+
+
+    screen.fill(black) #Fill in the screen
 
     #Set the snake on the screen
     pygame.draw.rect(screen, green, pygame.Rect(snake_position[0], snake_position[1], 10, 10))
