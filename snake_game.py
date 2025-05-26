@@ -56,6 +56,7 @@ while running:
         snake_position[1] += 10
 
     snake_body.insert(0, list(snake_position))
+    snake_body.pop()                                                  #how do you remove the last element of the list? ((pop))  (exam question)
 
     
     pygame.display.flip() #Refreshes the screen
