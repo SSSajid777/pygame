@@ -2,7 +2,8 @@ import pygame
 
 pygame.init()
 #Set our screen size
-width, height= 400, 400
+width, height= 720, 480
+pygame.display.set_caption("ICS3U/C Snake Game")
 screen = pygame.display.set_mode((width, height))
 
 #Main running loop
