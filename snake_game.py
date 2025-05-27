@@ -18,6 +18,13 @@ snake_speed=10
 direction='RIGHT'
 snake_body=[[360,240],[350, 240], [340, 240], [330, 240]]
 
+def endgame():
+    #Create a font object
+    my_font=pygame.font.SysFont('comicsansms', 50)
+
+    #Create text surface
+    game_over_surface=my_font.render('GAME OVER', True, red)
+
 #Main running loop
 running=True
 while running:
