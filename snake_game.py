@@ -92,7 +92,8 @@ while running:
     snake_body.insert(0, list(snake_position))
     
     #Eat the fruit
-    if snake_position[0]==fruit_position[0]and snake_position[1]==fruit_position[1]:
+    #if snake_position[0]==fruit_position[0]and snake_position[1]==fruit_position[1]:
+    if snake_position==fruit_position:
         fruit_position = [random.randrange(0, (width//10))*10,
                   random.randrange(0, (height//10))*10]
     else:
