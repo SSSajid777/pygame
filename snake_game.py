@@ -25,6 +25,9 @@ def endgame():
     #Create text surface
     game_over_surface=my_font.render('GAME OVER', True, red)
 
+    #Create a rectangle object for the surface
+    game_over_rect=game_over_surface.get_rect()
+
 #Main running loop
 running=True
 while running:
