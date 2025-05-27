@@ -95,6 +95,10 @@ while running:
      endgame()
     if snake_position[1] < 0 or snake_position[1] > height:
      endgame()
+     for block in snake_body[1:]:
+         if snake_position[0]== block[0] and snake_position[1]==block[1]:
+             endgame()
+        
 
 
 pygame.quit()
