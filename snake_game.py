@@ -22,8 +22,8 @@ snake_body=[[360,240],[350, 240], [340, 240], [330, 240]]
 
 
 #FRUIT!
-fruit_position = [random.randrange(0, (width//10)*10),
-                  random.randrange(0, (height//10)*10)]
+fruit_position = [random.randrange(0, (width//10))*10,
+                  random.randrange(0, (height//10))*10]
 def endgame():
     #Create a font object
     my_font=pygame.font.SysFont('comicsansms', 50)
@@ -72,6 +72,9 @@ while running:
     #Set the snake on the screen
     for pos in snake_body:
         pygame.draw.rect(screen, green, pygame.Rect(pos[0], pos[1], 10, 10))
+
+    #Draw my fruit
+    pygame.draw.circle(screen, red, (fruit_position[0]+5, fruit_position[1]+5),5)
     
     
 
