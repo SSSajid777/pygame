@@ -90,7 +90,13 @@ while running:
         snake_position[1] += 10
 
     snake_body.insert(0, list(snake_position))
-    snake_body.pop()                                                  #how do you remove the last element of the list? ((pop))  (exam question)
+    
+    #Eat the fruit
+    if snake_position[0]==fruit_position[0]and snake_position[1]==fruit_position[1]:
+        fruit_position = [random.randrange(0, (width//10))*10,
+                  random.randrange(0, (height//10))*10]
+    else:
+     snake_body.pop()                                                  #how do you remove the last element of the list? ((pop))  (exam question)
 
     
     pygame.display.flip() #Refreshes the screen
