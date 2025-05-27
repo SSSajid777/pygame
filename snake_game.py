@@ -1,5 +1,6 @@
 import pygame
 import time
+import random
 
 #Define colors
 black=-0,0,0
@@ -19,6 +20,10 @@ snake_speed=10
 direction='RIGHT'
 snake_body=[[360,240],[350, 240], [340, 240], [330, 240]]
 
+
+#FRUIT!
+fruit_position = [random.randrange(0, (width//10)*10),
+                  random.randrange(0, (height//10)*10)]
 def endgame():
     #Create a font object
     my_font=pygame.font.SysFont('comicsansms', 50)
