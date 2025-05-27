@@ -90,5 +90,11 @@ while running:
     clock=pygame.time.Clock()
     clock.tick(snake_speed) 
 
+#Endgame conditions
+if snake_position[0] < 0 or snake_position[0] > width:
+    endgame()
+if snake_position[1] < 0 or snake_position[1] > height:
+    endgame()
+
 
 pygame.quit()
