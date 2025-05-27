@@ -1,4 +1,5 @@
 import pygame
+import time
 
 #Define colors
 black=-0,0,0
@@ -27,6 +28,21 @@ def endgame():
 
     #Create a rectangle object for the surface
     game_over_rect=game_over_surface.get_rect()
+
+    #Position our game over object
+    game_over_rect.center=[(width/2),(height/2)]
+
+    #blit= draw the surface on the rectangle
+    screen.blit(game_over_surface, game_over_rect)
+
+    #Update the screen
+    pygame.display.flip()  #Update the screen
+
+    time.sleep(2)
+
+    #Deactivate the quit
+    pygame.quit()
+    quit()
 
 #Main running loop
 running=True
