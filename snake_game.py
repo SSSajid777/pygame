@@ -115,7 +115,7 @@ while running:
         fruit_position = [random.randrange(0, (width//10))*10,
                         random.randrange(0, (height//10))*10]
         score += 10
-        snake_speed += 5
+        snake_speed += 3
         munch.play()
     else:
         snake_body.pop()
