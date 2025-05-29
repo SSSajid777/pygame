@@ -19,6 +19,7 @@ screen = pygame.display.set_mode((width, height))
 #Sound Effect Stuff
 pygame.mixer.init()
 munch = pygame.mixer.Sound('munch.wav')
+game_over_sound=pygame.mixer.Sound('game_over.mp3')
 
 #Snake Information
 snake_position = [360, 240]
@@ -130,11 +131,11 @@ while running:
 
     #Endgame conditions
     if snake_position[0] < 0 or snake_position[0] >= width:
-        endgame()
+        endgame() and game_over_sound.play()
     if snake_position[1] < 0 or snake_position[1] >= height:
-        endgame()
+        endgame() and game_over_sound.play()
     for block in snake_body[1:]:
         if snake_position[0] == block[0] and snake_position[1] == block[1]:
-            endgame()
+            endgame() and game_over_sound.play()
 
 pygame.quit()
