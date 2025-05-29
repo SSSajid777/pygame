@@ -7,11 +7,18 @@ black = 0, 0, 0
 green = 0, 255, 0
 red = 255, 0, 0
 
+score = 0 #Set the initial score
+background = pygame.image.load('grid_background.png')
+
 #Initial screen stuff
 pygame.init()
 width, height = 720, 480
 pygame.display.set_caption('ICS3U/C1 Snake Game')
 screen = pygame.display.set_mode((width, height))
+
+#Sound Effect Stuff
+pygame.mixer.init()
+munch = pygame.mixer.Sound('munch.wav')
 
 #Snake Information
 snake_position = [360, 240]
@@ -20,6 +27,8 @@ direction = 'RIGHT'
 snake_body = [[360,240],[350,240],[340,240],[330,240]]
 
 #FRUIT!
+apple_image = pygame.image.load('apple.png')
+apple_image = pygame.transform.scale(apple_image, (10, 10))
 fruit_position = [random.randrange(0, (width//10))*10,
                   random.randrange(0, (height//10))*10]
 
@@ -47,6 +56,22 @@ def endgame():
     pygame.quit()
     quit()
 
+#Display the score
+def scoring(score):
+    #Create a font object
+    score_font = pygame.font.SysFont('comicsansms', 20)
+
+    #Create text surface
+    score_surface = score_font.render('Score: '+str(score), True, red)
+
+    #Create a rectangle object for the surface
+    score_rect = score_surface.get_rect()
+
+    #blit = draw the surface onto the rectangle
+    screen.blit(score_surface, score_rect)
+
+    pygame.display.flip() #Update the screen
+
 running = True
 while running:
     for event in pygame.event.get():
@@ -62,14 +87,16 @@ while running:
             if event.key == pygame.K_RIGHT and direction != 'LEFT':
                 direction = 'RIGHT'
 
-    screen.fill(black) #Fill in the screen
+    #screen.fill(black) #Fill in the screen
+    screen.blit(background, (0,0))
 
     #Set the snake on the screen
     for pos in snake_body:
         pygame.draw.rect(screen, green, pygame.Rect(pos[0], pos[1], 10, 10))
     
     #Draw my fruit
-    pygame.draw.circle(screen, red, (fruit_position[0]+5,fruit_position[1]+5),5)
+    #pygame.draw.circle(screen, red, (fruit_position[0]+5,fruit_position[1]+5),5)
+    screen.blit(apple_image, (fruit_position[0], fruit_position[1]))
 
     #Moving the snake
     if direction == 'RIGHT':
@@ -87,8 +114,13 @@ while running:
     if snake_position==fruit_position:
         fruit_position = [random.randrange(0, (width//10))*10,
                         random.randrange(0, (height//10))*10]
+        score += 10
+        speed += 5
+        munch.play()
     else:
         snake_body.pop()
+
+    scoring(score)#Display the score
 
     pygame.display.flip()
 
