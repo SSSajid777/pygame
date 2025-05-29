@@ -20,7 +20,7 @@ screen = pygame.display.set_mode((width, height))
 pygame.mixer.init()
 munch = pygame.mixer.Sound('munch.wav')
 game_background_music=pygame.mixer.Sound('game_background_sound.mp3')
-game_over_sound=pygame.mixer.music.load(('game_background_sound'))
+game_over_sound=pygame.mixer.Sound(('game_over.mp3'))
 
 #Snake Information
 snake_position = [360, 240]
